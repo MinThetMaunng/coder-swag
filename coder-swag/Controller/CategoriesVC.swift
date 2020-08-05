@@ -27,9 +27,9 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             let category = DataService.instance.getCategories()[indexPath.row]
             cell.updateViews(category: category)
             return cell
-        } else {
-            return CategoryCell()
         }
+            
+        return CategoryCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

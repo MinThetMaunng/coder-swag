@@ -24,7 +24,6 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         products = DataService.instance.getProduct(forCategoryTitle: category.title)
     }
 
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
     }
@@ -34,9 +33,9 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             let product = products[indexPath.row]
             cell.updateViews(product: product)
             return cell
-        } else {
-            return ProductCell()
         }
+            
+        return ProductCell()
     }
-    
+
 }
