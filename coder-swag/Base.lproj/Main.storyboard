@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOP BY CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpa-Wt-Kzp">
-                                <rect key="frame" x="20" y="30" width="165" height="23.666666666666671"/>
+                                <rect key="frame" x="20" y="30" width="374" height="23.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2b4-cG-5hk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2b4-cG-5hk">
                                 <rect key="frame" x="0.0" y="69.666666666666686" width="414" height="622.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="172" id="sYw-fS-TsV" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="172" id="sYw-fS-TsV" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="172"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sYw-fS-TsV" id="1Zy-KN-cnW">
@@ -33,12 +33,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="psP-7f-HPm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
+                                                    <rect key="frame" x="0.0" y="3" width="414" height="166"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="170" id="rH3-BU-fWq"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIc-Qx-0JL">
-                                                    <rect key="frame" x="107" y="61" width="200" height="50"/>
+                                                    <rect key="frame" x="160.66666666666666" y="61" width="92.666666666666657" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="LjW-jS-0Xb"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="LjW-jS-0Xb"/>
                                                         <constraint firstAttribute="height" constant="50" id="VSW-IA-lpp"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
@@ -47,10 +50,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="psP-7f-HPm" firstAttribute="top" secondItem="1Zy-KN-cnW" secondAttribute="top" constant="3" id="2GK-ts-Vqr"/>
                                                 <constraint firstItem="cIc-Qx-0JL" firstAttribute="centerY" secondItem="1Zy-KN-cnW" secondAttribute="centerY" id="B7A-8J-q3b"/>
                                                 <constraint firstAttribute="trailing" secondItem="psP-7f-HPm" secondAttribute="trailing" id="RMS-gT-cS7"/>
-                                                <constraint firstAttribute="bottom" secondItem="psP-7f-HPm" secondAttribute="bottom" id="Xw4-yB-qbs"/>
-                                                <constraint firstItem="psP-7f-HPm" firstAttribute="top" secondItem="1Zy-KN-cnW" secondAttribute="top" id="Z3s-wb-Mbr"/>
+                                                <constraint firstAttribute="bottom" secondItem="psP-7f-HPm" secondAttribute="bottom" constant="3" id="i7W-Ii-dXZ"/>
                                                 <constraint firstItem="cIc-Qx-0JL" firstAttribute="centerX" secondItem="1Zy-KN-cnW" secondAttribute="centerX" id="mxZ-g6-4tO"/>
                                                 <constraint firstItem="psP-7f-HPm" firstAttribute="leading" secondItem="1Zy-KN-cnW" secondAttribute="leading" id="pZ5-4D-Rz9"/>
                                             </constraints>
@@ -66,6 +69,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hpa-Wt-Kzp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1o2-bq-W69"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hpa-Wt-Kzp" secondAttribute="trailing" constant="20" id="1py-Dc-RCK"/>
                             <constraint firstItem="hpa-Wt-Kzp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="2bn-Tg-bhJ"/>
                             <constraint firstItem="2b4-cG-5hk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ANh-8N-jwg"/>
                             <constraint firstItem="2b4-cG-5hk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MFn-1W-4sH"/>
