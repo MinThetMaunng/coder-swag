@@ -39,6 +39,7 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let productsVC = segue.destination as? ProductsVC {
+            assert(sender as? Category != nil)
             productsVC.initProducts(category: sender as! Category)
         }
     }
